@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" class="num1"> 
+        <select>
+            <option value="add" class="add">+</option>
+            <option value="subtract" class="subtract">-</option>
+        </select> 
+        <input type="text" class="num2"> 
+        <input type="button" class="btn" value="="> 
+        <input type="text" class="result">
+    </form>
+    <script>
+        var broj1 = document.querySelector('.num1');
+
+        var add = document.querySelector('.add');
+
+        var subtract = document.querySelector('.subtract');
+
+        var broj2 = document.querySelector('.num2');
+
+        var btn = document.querySelector('.btn');
+
+        var result = document.querySelector('.result');
+        
+        btn.addEventListener('click', function(){
+            if (add) {
+                result.value = parseInt(broj1.value) + parseInt(broj2.value);
+            } else if (subtract) {
+                result.value = parseInt(broj1.value) - parseInt(broj2.value);
+            }
+        });
+    </script>
+</body>
+</html>
