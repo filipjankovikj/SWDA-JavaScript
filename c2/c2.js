@@ -30,4 +30,4 @@ function mesec(m) {
 }
 
 mesec('Dekemvri'); // true
-mesec('januari'); // false
+mesec('januari'); }// false
