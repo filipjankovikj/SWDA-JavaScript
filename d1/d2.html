@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" class="temp">
+        <select class="convert">
+            <option value="c2f" class="c2f">C to F</option>
+            <option value="f2c" class="f2c">F to C</option>
+        </select>
+        <input type="button" class="btn" value="=">
+        <input type="text" class="result">
+    </form>
+    <script>
+        var temp = document.querySelector('.temp');
+
+        var convert = document.querySelector('.convert');
+
+        var c2f = document.querySelector('.c2f');
+
+        var f2c = document.querySelector('.f2c');
+
+        var btn = document.querySelector('.btn');
+
+        var result = document.querySelector('.result');
+
+        btn.addEventListener('click', function(){
+            switch (document.querySelector('.convert').value) {
+                case 'c2f':
+                result.value = (parseInt(temp.value) * parseInt('1.8'))+ parseInt('32');
+                break;
+                case 'f2c':
+                result.value = (parseInt(temp.value) - parseInt('32')) / parseInt('1.8');
+            }
+        })
+    </script>
+</body>
+</html>
