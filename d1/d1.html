@@ -9,7 +9,7 @@
 <body>
     <form>
         <input type="text" class="num1"> 
-        <select>
+        <select class="operation">
             <option value="add" class="add">+</option>
             <option value="subtract" class="subtract">-</option>
         </select> 
@@ -31,11 +31,19 @@
         var result = document.querySelector('.result');
         
         btn.addEventListener('click', function(){
-            if (add) {
-                result.value = parseInt(broj1.value) + parseInt(broj2.value);
-            } else if (subtract) {
-                result.value = parseInt(broj1.value) - parseInt(broj2.value);
+            switch (document.querySelector('.operation').value) {
+                case 'add':
+                    result.value = parseInt(broj1.value) + parseInt(broj2.value);
+                break;
+                case 'subtract':
+                    result.value = parseInt(broj1.value) - parseInt(broj2.value);
+                break;
             }
+            // if (add) {
+            //     result.value = parseInt(broj1.value) + parseInt(broj2.value);
+            // } else if (subtract) {
+            //     result.value = parseInt(broj1.value) - parseInt(broj2.value);
+            // }
         });
     </script>
 </body>
