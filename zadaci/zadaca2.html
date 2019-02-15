@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="inp">
+    <input type="button" value="GO" class="btn">
+    <script>
+        var input = document.querySelector('.inp');
+        var btn = document.querySelector('.btn');
+        // var niza = ['Ana', 'Bojan', 'Viktor', 'Aleksandar'];
+
+        btn.addEventListener('click', function() {
+                if(input.length < 5){
+                    console.log('kratko ime');
+                } if(input.length > 8){
+                    console.log('dolgo ime');
+                } if(input.length >= 5 <= 8){
+                    console.log('sredno ime');
+                }
+            });
+    </script>
+</body>
+</html>
