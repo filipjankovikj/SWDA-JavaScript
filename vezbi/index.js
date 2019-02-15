@@ -92,3 +92,10 @@ console.log(res);
 //
 
 
+var niza = [345, 'TEXT', false, 'PAK STRING', 'I PAK STRING', false, true, false, 11, 12];
+
+for(var i = 0; i < niza.length; i++){
+    if(typeof niza[i] == 'string'){
+        console.log(niza[i]);
+    }
+}
