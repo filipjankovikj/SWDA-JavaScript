@@ -13,16 +13,19 @@
         var input = document.querySelector('.inp');
         var btn = document.querySelector('.btn');
         // var niza = ['Ana', 'Bojan', 'Viktor', 'Aleksandar'];
+        // var min = 5;
+        // var max = 8;
 
         btn.addEventListener('click', function() {
-                if(input.length < 5){
-                    console.log('kratko ime');
-                } if(input.length > 8){
-                    console.log('dolgo ime');
-                } if(input.length >= 5 <= 8){
-                    console.log('sredno ime');
-                }
-            });
+            // for(i = 0; i < niza.length; i++);
+            if(input.value.length > 0 && input.value.length < 5){
+                console.log('Kratko ime');
+            } else if(input.value.length >= 5 && input.value.length <= 8){
+                console.log('Sredno ime');
+            } else if(input.value.length > 8){
+                console.log('Dolgo ime');
+            }
+        });
     </script>
 </body>
 </html>
